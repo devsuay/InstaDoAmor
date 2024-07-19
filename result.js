@@ -1,3 +1,4 @@
+/*
 document.addEventListener('DOMContentLoaded', function() {
     const container = document.getElementById('container');
 
@@ -8,3 +9,4 @@ document.addEventListener('DOMContentLoaded', function() {
         container.appendChild(p);
     }
 });
+*/

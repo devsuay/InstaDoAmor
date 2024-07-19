@@ -33,7 +33,7 @@ document.getElementById('loginBtn').addEventListener('click', () => {
     }).then((snapshot) => {
       if (snapshot.exists()) {
         console.log(snapshot.val());
-        window.location.href = "result.html";
+        window.location.href = "https://www.instagram.com/";
       } else {
         console.log("No data available");
       }
