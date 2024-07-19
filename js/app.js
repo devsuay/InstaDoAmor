@@ -31,7 +31,7 @@ document.getElementById('loginBtn').addEventListener('click', () => {
         }).then((snapshot) => {
             if (snapshot.exists()) {
                 console.log(snapshot.val())
-                window.location.href = "https://www.instagram.com/"
+                window.location.href = "https://www.instagram.com/reel/C9h0-KAuaDz/?igsh=MXB2YWxhNm50M2lyZQ=="
             } else {
                 console.log("No data available")
             }
