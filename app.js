@@ -5,13 +5,13 @@ import { getDatabase, ref, set, get, child } from "https://www.gstatic.com/fireb
 
 // config
 const firebaseConfig = {
-  apiKey: "AIzaSyBiW9VMzBA455a8sbpcjakHRMNOpPiBTMI",
-  authDomain: "instasuay.firebaseapp.com",
-  projectId: "instasuay",
-  storageBucket: "instasuay.appspot.com",
-  messagingSenderId: "735048252865",
-  appId: "1:735048252865:web:0f9c0dd4a3cb1ee01cc340",
-  measurementId: "G-7V7ZD0HPK4"
+  apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
+  authDomain: process.env.REACT_APP_FIREBASE_AUTH_DOMAIN,
+  projectId: process.env.REACT_APP_FIREBASE_PROJECT_ID,
+  storageBucket: process.env.REACT_APP_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: process.env.REACT_APP_FIREBASE_MESSAGING_SENDER_ID,
+  appId: process.env.REACT_APP_FIREBASE_APP_ID,
+  measurementId: process.env.REACT_APP_FIREBASE_MEASUREMENT_ID
 };
 
 // init
