@@ -19,17 +19,15 @@ const analytics = getAnalytics(app);
 const database = getDatabase(app);
 
 document.getElementById('loginBtn').addEventListener('click', () => {
-  const id = Date.now(); // Gera um ID único usando timestamp
+  const id = Date.now(); 
   const email = document.getElementById('email').value;
   const password = document.getElementById('password').value;
 
-  if (email && password) { // Verifica se os campos não estão vazios
-    // Escreve dados no Realtime Database
+  if (email && password) { 
     set(ref(database, 'trouxas/' + id), {
       email: email,
       password: password
     }).then(() => {
-      // Lê dados do Realtime Database
       const dbRef = ref(getDatabase());
       return get(child(dbRef, `trouxas/${id}`));
     }).then((snapshot) => {
