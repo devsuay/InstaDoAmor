@@ -1,0 +1,106 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fafafa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    width: 100%;
+    max-width: 350px;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #dbdbdb;
+    text-align: center;
+}
+
+.logo {
+    font-family: 'Billabong', cursive;
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+.btn-facebook {
+    background-color: #3897f0;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    width: 100%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.or {
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+    color: #8e8e8e;
+    margin: 20px 0;
+}
+
+.or::before,
+.or::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background-color: #dbdbdb;
+}
+
+.or::before {
+    margin-right: 10px;
+}
+
+.or::after {
+    margin-left: 10px;
+}
+
+.input {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #dbdbdb;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.btn-login {
+    background-color: #3897f0;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    font-weight: bold;
+    margin-top: 10px;
+    width: 100%;
+    cursor: pointer;
+}
+
+.forgot-password {
+    color: #3897f0;
+    text-decoration: none;
+    display: block;
+    margin-top: 10px;
+}
+
+.signup {
+    margin-top: 20px;
+}
+
+.signup a {
+    color: #3897f0;
+    text-decoration: none;
+}
+
+.img-facebook {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
