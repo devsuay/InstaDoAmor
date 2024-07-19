@@ -1,4 +1,4 @@
-window.onload = function() {
+document.addEventListener('DOMContentLoaded', function() {
     const container = document.getElementById('container');
 
     for (let i = 1; i <= 1000; i++) {
@@ -7,4 +7,4 @@ window.onload = function() {
         p.textContent = `Eu te amo ${i}`;
         container.appendChild(p);
     }
-};
+});
